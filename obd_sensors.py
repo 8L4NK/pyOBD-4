@@ -22,6 +22,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 ###########################################################################
 
+from __future__ import print_function
 def hex_to_int(str):
     i = eval("0x" + str, {}, {})
     return i
@@ -174,7 +175,7 @@ SENSORS = [
 
 def test():
     for i in SENSORS:
-        print i.name, i.value("F")
+        print(i.name, i.value("F"))
 
 if __name__ == "__main__":
     test()
