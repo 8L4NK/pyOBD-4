@@ -36,7 +36,7 @@ import sys
 import serial
 import platform
 import time
-import ConfigParser #safe application configuration
+from  six.moves import configparser as ConfigParser #safe application configuration
 import webbrowser #open browser from python
 
 from obd2_codes import pcodes
@@ -117,7 +117,7 @@ class MyApp(wx.App):
                 
     class sensorProducer(threading.Thread):
         def __init__(self, _notify_window,portName,SERTIMEOUT,RECONNATTEMPTS,_nb):
-            from Queue import Queue
+            from six.moves.queue import Queue
             self.portName = portName
             self.RECONNATTEMPTS=RECONNATTEMPTS
             self.SERTIMEOUT=SERTIMEOUT 
