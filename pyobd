@@ -551,8 +551,7 @@ the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  0211
 
         root = tree.AddRoot("Code Reference")
         proot = root; # tree.AppendItem(root,"Powertrain (P) Codes")
-        codes = pcodes.keys()
-        codes.sort()
+        codes = sorted(list(pcodes.keys()))
         group = ""
         for c in codes:
             if c[:3] != group:
